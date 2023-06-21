@@ -13,11 +13,11 @@ pub fn angle(x Number, y Number) Number {
 		}
 	} else if x == 0 {
 		if y > 0 {
-			return math.pi/2
+			return math.pi / 2
 		} else if y == 0 {
 			return 0
 		} else if y < 0 {
-			return 3*math.pi/2
+			return 3 * math.pi / 2
 		}
 	} else {
 		if y > 0 {
@@ -30,32 +30,37 @@ pub fn angle(x Number, y Number) Number {
 	}
 	return 0
 }
-pub struct Point2{
-	x Number
-	y Number
-	z Number
-	t Number
+
+pub struct Point2 {
+	x   Number
+	y   Number
+	z   Number
+	t   Number
 	tag string
 }
 
-pub fn (this Point2) length_squared() Number{
-	return this.x*this.x + this.y*this.y + this.z*this.z + this.t*this.t
-}
-pub fn (this Point2) length() Number{
-	return math.sqrt(this.length_squared())
-}
-pub fn (this Point2) angle_xy() Number{
-	return angle(this.x,this.y)
-}
-pub fn (this Point2) angle_xz() Number{
-	return angle(this.x,this.z)
-}
-pub fn (this Point2) angle_xt() Number{
-	return angle(this.x,this.z)
+pub fn (this Point2) length_squared() Number {
+	return this.x * this.x + this.y * this.y + this.z * this.z + this.t * this.t
 }
 
-pub fn (this Point2) normalized() Point2{
-	a:=this.angle_xy()
+pub fn (this Point2) length() Number {
+	return math.sqrt(this.length_squared())
+}
+
+pub fn (this Point2) angle_xy() Number {
+	return angle(this.x, this.y)
+}
+
+pub fn (this Point2) angle_xz() Number {
+	return angle(this.x, this.z)
+}
+
+pub fn (this Point2) angle_xt() Number {
+	return angle(this.x, this.z)
+}
+
+pub fn (this Point2) normalized() Point2 {
+	a := this.angle_xy()
 	return Point2{
 		x: math.cos(a)
 		y: math.sin(a)
@@ -64,4 +69,3 @@ pub fn (this Point2) normalized() Point2{
 		tag: this.tag
 	}
 }
-

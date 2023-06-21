@@ -1,4 +1,4 @@
-module canvas
+module vsvg
 
 pub struct Style {
 	svg_attr string

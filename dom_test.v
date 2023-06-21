@@ -1,4 +1,4 @@
-module canvas
+module vsvg
 
 fn test_node_type_from_text() {
 	text := 'text'

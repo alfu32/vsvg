@@ -1,4 +1,4 @@
-module canvas
+module vsvg
 
 import math
 

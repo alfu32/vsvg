@@ -1,4 +1,4 @@
-module canvas
+module vsvg
 
 fn test_create() {
 	ctx := canvas_rendering_context2d_svg_init()

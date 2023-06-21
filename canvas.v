@@ -1,4 +1,4 @@
-module canvas
+module vsvg
 
 interface CanvasCompositing {
 	global_alpha Number

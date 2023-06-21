@@ -1,4 +1,4 @@
-module canvas
+module vsvg
 
 pub enum NodeType {
 	text = 1

@@ -1,4 +1,4 @@
-module canvas
+module vsvg
 
 enum GlobalCompositeOperation {
 	color = 0xFF

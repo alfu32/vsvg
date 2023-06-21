@@ -1,10 +1,8 @@
-module main
+module vsvg
 
-import canvas
-
-fn main() {
+fn test_main() {
 	println('Hello, World!')
-	ce := canvas.create_element
+	ce := create_element
 	mut div := ce('pre')
 	div.set_attribute('class', 'button button-primary')
 	div.set_attribute('id', '1234567')
